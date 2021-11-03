@@ -26,7 +26,7 @@ public class Cliente implements Serializable {
 	private Integer id;
 	private String nome;
 	private String email;
-	private String cpfouCnpj;
+	private String cpfOuCnpj;
 	private Integer tipo;
 
 	@OneToMany(mappedBy = "cliente")
@@ -44,12 +44,12 @@ public class Cliente implements Serializable {
 		super();
 	}
 
-	public Cliente(Integer id, String nome, String email, String cpfouCnpj, TipoCliente tipo) {
+	public Cliente(Integer id, String nome, String email, String cpfOuCnpj, TipoCliente tipo) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
-		this.cpfouCnpj = cpfouCnpj;
+		this.cpfOuCnpj = cpfOuCnpj;
 		this.tipo = (tipo == null) ? null : tipo.getCod();
 	}
 
@@ -77,12 +77,12 @@ public class Cliente implements Serializable {
 		this.email = email;
 	}
 
-	public String getCpfouCnpj() {
-		return cpfouCnpj;
+	public String getCpfOuCnpj() {
+		return cpfOuCnpj;
 	}
 
-	public void setCpfouCnpj(String cpfouCnpj) {
-		this.cpfouCnpj = cpfouCnpj;
+	public void setCpfOuCnpj(String cpfOuCnpj) {
+		this.cpfOuCnpj = cpfOuCnpj;
 	}
 
 	public TipoCliente getTipo() {
